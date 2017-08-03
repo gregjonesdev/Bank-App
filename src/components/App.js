@@ -7,7 +7,7 @@ import '../styles/App.css';
 
 
 //move under <p className= "lead">
-//Link must be in a router
+//because every "Link" must be in a router
 // <Link className= "btn btn-primary btn-lg" to="/users" role="button">Check Users</Link>
 
 
@@ -22,12 +22,13 @@ class App extends Component {
             <hr className= "my-4"/>
             <p>Quick, fast, and sometimes accurate account results.</p>
             <p className= "lead">
-              </p>
-            </div>
+              <Link className= "btn btn-primary btn-lg" to="/users" role="button">Check Users</Link>
+            </p>
+          </div>
         </div>
 
 
-    );
+    )
   }
 }
 
