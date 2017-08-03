@@ -4,17 +4,12 @@ import '../styles/App.css';
 
 
 //import components and containers
-
-
-//move under <p className= "lead">
-//because every "Link" must be in a router
-// <Link className= "btn btn-primary btn-lg" to="/users" role="button">Check Users</Link>
+import UserList from '../containers/UserList'
 
 
 class App extends Component {
   render() {
     return (
-
         <div className="main">
           <div className= "jumbotron">
             <h1 className= "display-3">BankShot</h1>
@@ -26,7 +21,6 @@ class App extends Component {
             </p>
           </div>
         </div>
-
 
     )
   }

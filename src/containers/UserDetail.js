@@ -71,5 +71,15 @@ component.
 
 */
 
+function mapDispatchToProps(dispatch) {
+  // whenever selectAccount is called, the result should be passed to
+  // the reducer.
+    return {
+      selectAccount: account => {
+        dispatch(selectUser(account))
+      }
+    }
+}
+
 
 export default connect(mapStateToProps,  mapDispatchToProps)(UserDetail);

@@ -2,29 +2,33 @@
 import React, {Component} from 'react';
 //Redux imports
 import {connect} from 'react-redux';
+
 import {selectUser} from '../actions/index.js'
+
 import { bindActionCreators } from 'redux';
 //react router imports
 import { Link } from 'react-router-dom';
 
 class UserList extends Component {
+
+
     render() {
         let users = this.props.users.map((user) => {
             return (
-                <li key={user._id} className="list-group-item" onClick={() => this.props.selectUser(user._id)}>
-                  
+                <li key={user._id} className="list-group-item" onClick={() => this.props.selectUser(user._id)}>{user.name}
+
                 </li>
             );
         });
-        return (
+         return (
             <div>
               <h5>Users with open accounts:</h5>
-              <ul>
-                {users}
-              </ul>
+                <ul>
+                  {users}
+                </ul>
             </div>
         );
-    }
+     }
 }
 
 function mapStateToProps(state) {

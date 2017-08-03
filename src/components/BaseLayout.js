@@ -8,9 +8,11 @@ export default class BaseLayout extends Component {
     return (
       <div>
         <header>
+          This is the header
         </header>
           {this.props.children}
         <footer>
+          This is the footer
         </footer>
       </div>
     )
