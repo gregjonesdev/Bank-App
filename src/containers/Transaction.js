@@ -11,9 +11,13 @@ class Transaction extends Component {
   render() {
     return(
       <div>
-        <h3>Mother fucking transaction time</h3>
+        <h3>Please select an amount to withdraw from your {this.props.account.accountType} account.</h3>
+        <h3>Your current balance is: {this.props.account.balance}</h3>
 
-
+        <Link className="btn amount five" to="/">$5</Link>
+        <Link className="btn amount ten" to="/">$10</Link>
+        <Link className="btn amount twenty" to="/">$20</Link>
+        <Link className="btn btn-primary return" to="/user_detail/${id}/${account.id}" >Back to User Details</Link>
       </div>
     )
   }
