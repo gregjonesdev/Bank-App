@@ -6,6 +6,9 @@ import { bindActionCreators } from 'redux';
 //import router Link
 import { Link } from 'react-router-dom';
 
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+
 class AccountDetail extends Component {
 
   render() {
@@ -24,7 +27,7 @@ class AccountDetail extends Component {
             </div>
           </div>
           <div className="functions">
-            <Link className="btn btn-withdraw" to="/users" >Withdraw Funds</Link>
+            <Link className="btn btn-withdraw" to='/user_detail/${id}/${account.id}/transaction'>Withdraw Funds</Link>
             <Link className="btn btn-primary" to="/user_detail/${id}" >Back to User Details</Link>
           </div>
         </div>

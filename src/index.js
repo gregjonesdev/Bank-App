@@ -19,6 +19,7 @@ import BaseLayout from './components/BaseLayout'
 import UserList from './containers/UserList'
 import UserDetail from './containers/UserDetail'
 import AccountDetail from './containers/AccountDetail'
+import Transaction from './containers/Transaction'
 
 //redux imports
 import { Provider } from 'react-redux';
@@ -36,6 +37,7 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route path="/users" component={UserList} />
+          <Route path="/user_detail/:id/:accountid/transaction" component={Transaction} />
           <Route path="/user_detail/:id/:accountid" component={AccountDetail} />
           <Route path="/user_detail/:id" component={UserDetail} />
           <Route path="/" component={App}/>
