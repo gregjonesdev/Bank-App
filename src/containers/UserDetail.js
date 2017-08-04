@@ -13,12 +13,11 @@ class UserDetail extends Component {
         <div>Please select a user...</div>
       )
     }
-    console.log(this.props.user)
+    //console.log(this.props.user)
     //get user id from params of URL
 
 
-    //const { id } = this.props.match.params;
-    const { id } = this.props.user
+    const { id } = this.props.match.params
 
     //map over the accounts for the user to create links to them.
     let accounts = this.props.user.accounts.map(account => {

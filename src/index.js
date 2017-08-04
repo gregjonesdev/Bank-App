@@ -36,8 +36,8 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route path="/users" component={UserList} />
-          <Route path="/user_detail/" component={UserDetail} />
-          <Route path="/account_detail" component={AccountDetail} />
+          <Route path="/user_detail/:id/:accountid" component={AccountDetail} />
+          <Route path="/user_detail/:id" component={UserDetail} />
           <Route path="/" component={App}/>
         </Switch>
       </BaseLayout>
