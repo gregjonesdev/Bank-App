@@ -7,10 +7,13 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 class AccountDetail extends Component {
+
+
   render() {
     return (
       <div>
-        This is a fucking account detail
+        
+        This is a fucking account detail{this.props.account.balance}
       </div>
     )
   }
