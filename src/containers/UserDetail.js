@@ -6,18 +6,20 @@ import { bindActionCreators } from 'redux';
 //import router Link
 import { Link } from 'react-router-dom';
 
-
-
 class UserDetail extends Component {
-
   render() {
     if(!this.props.user) {
       return (
         <div>Please select a user...</div>
       )
     }
+    console.log(this.props.user)
     //get user id from params of URL
-    const { id } = this.props.match.params;
+
+
+    //const { id } = this.props.match.params;
+    const { id } = this.props.user
+
     //map over the accounts for the user to create links to them.
     let accounts = this.props.user.accounts.map(account => {
 
@@ -27,13 +29,13 @@ class UserDetail extends Component {
         <div key={account.id}>
           <Link
             onClick={() => this.props.selectAccount(account)}
-            to={`/users/${id}/${account.id}`}>{account.accountType}</Link>
+            to={`/user_detail/${id}/${account.id}`}>{account.accountType}</Link>
         </div>
 
       )
     })
     return (
-      <div className="col-md-6">
+       <div className="col-md-6">
         <div className= "card">
           <div className= "card-block">
             <h4 className= "card-title">Account Information</h4>
@@ -50,7 +52,7 @@ class UserDetail extends Component {
         </div>
 
 
-      </div>
+       </div>
     );
   }
 }
@@ -72,13 +74,9 @@ component.
 */
 
 function mapDispatchToProps(dispatch) {
-  // whenever selectAccount is called, the result should be passed to
-  // the reducer.
-    return {
-      selectAccount: account => {
-        dispatch(selectUser(account))
-      }
-    }
+    return bindActionCreators({
+        selectAccount: selectAccount
+    }, dispatch)
 }
 
 

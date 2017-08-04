@@ -18,11 +18,12 @@ import App from './components/App'
 import BaseLayout from './components/BaseLayout'
 import UserList from './containers/UserList'
 import UserDetail from './containers/UserDetail'
+import AccountDetail from './containers/AccountDetail'
 
 //redux imports
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
+import reducer from './reducers';
 
 const store = createStore(
   index,
@@ -35,7 +36,8 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route path="/users" component={UserList} />
-          <Route path="/user_detail" component={UserDetail} />
+          <Route path="/user_detail/" component={UserDetail} />
+          <Route path="/account_detail" component={AccountDetail} />
           <Route path="/" component={App}/>
         </Switch>
       </BaseLayout>

@@ -11,18 +11,20 @@ import { Link } from 'react-router-dom';
 
 class UserList extends Component {
 
-
     render() {
         let users = this.props.users.map((user) => {
             return (
-                <li key={user._id} className="list-group-item" onClick={() => this.props.selectUser(user._id)}>{user.name}
+                <li key={user._id} className="list-group-item"><Link
+                  onClick={() => this.props.selectUser(user)}
+                  to={`/user_detail/${user._id}`}>{user.name}</Link></li>
 
-                </li>
+
+
             );
         });
          return (
             <div>
-              <h5>Users with open accounts:</h5>
+              <h5>Users with open accounts:{this.props.user}</h5>
                 <ul>
                   {users}
                 </ul>

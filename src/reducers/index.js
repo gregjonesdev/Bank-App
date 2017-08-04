@@ -10,8 +10,10 @@ const initialState = {
 }
 
 const reducer = function(state = initialState, action) {
+    console.log("REDUCER")
     switch (action.type) {
         case USER_SELECTED:
+            //action.payload is the user _id
             return update(state, {
                 selectedUser: {
                     $set: action.payload
@@ -45,5 +47,7 @@ const reducer = function(state = initialState, action) {
             return state;
     }
 }
+
+
 
 export default reducer;
