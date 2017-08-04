@@ -8,12 +8,26 @@ import { Link } from 'react-router-dom';
 
 class AccountDetail extends Component {
 
-
   render() {
+
+    const { id } = this.props.match.params
+
+
     return (
-      <div>
-        
-        This is a fucking account detail{this.props.account.balance}
+      <div className="col-md-6">
+        <div className= "card">
+          <div className= "card-block">
+            <h4 className= "card-title">Account Information</h4>
+            <h6 className= "card-subtitle mb-2 text-muted">{this.props.account.accountType} for  {this.props.user.name}</h6>
+            <div className= "card-text">
+              Balance: {this.props.account.balance}
+            </div>
+          </div>
+          <div className="functions">
+            <Link className="btn btn-withdraw" to="/users" >Withdraw Funds</Link>
+            <Link className="btn btn-primary" to="/user_detail/${id}" >Back to User Details</Link>
+          </div>
+        </div>
       </div>
     )
   }

@@ -34,7 +34,7 @@ class UserDetail extends Component {
       )
     })
     return (
-       <div className="col-md-6">
+      <div className="col-md-6">
         <div className= "card">
           <div className= "card-block">
             <h4 className= "card-title">Account Information</h4>
@@ -49,9 +49,7 @@ class UserDetail extends Component {
           </div>
           <Link className="btn btn-primary" to="/users" >Back to List of Users</Link>
         </div>
-
-
-       </div>
+      </div>
     );
   }
 }
