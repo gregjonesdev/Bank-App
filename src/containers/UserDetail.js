@@ -39,15 +39,19 @@ class UserDetail extends Component {
           <div className= "card-block">
             <h4 className= "card-title">Account Information</h4>
             <h6 className= "card-subtitle mb-2 text-muted">{this.props.user.name}</h6>
+
+
             <div className= "card-text">
               <div>{this.props.user.email}</div>
               <div>{this.props.user.phone}</div>
               <div>{this.props.user.address}</div>
-
             </div>
-            {accounts}
+
+            <div className="accounts">{accounts}</div>
           </div>
-          <Link className="btn btn-primary" to="/users" >Back to List of Users</Link>
+          <div>
+            <Link className="btn btn-primary" to="/users" >Back to List of Users</Link>
+          </div>
         </div>
       </div>
     );

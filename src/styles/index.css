@@ -10,6 +10,11 @@ body {
   color: blue;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn {
 
   color: white;
@@ -46,4 +51,8 @@ body {
 
 .return {
   background-color: red;
+}
+
+.accounts {
+  margin: 30px 0;
 }
