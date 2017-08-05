@@ -7,13 +7,16 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 class UserDetail extends Component {
+
+
   render() {
+    console.log("UserDetail")
     if(!this.props.user) {
       return (
         <div>Please select a user...</div>
       )
     }
-    //console.log(this.props.user)
+    console.log(this.props.user) //logs ID number
     //get user id from params of URL
 
 
