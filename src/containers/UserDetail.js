@@ -10,7 +10,6 @@ class UserDetail extends Component {
 
 
   render() {
-    console.log("UserDetail")
     if(!this.props.user) {
       return (
         <div>Please select a user...</div>

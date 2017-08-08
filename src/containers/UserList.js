@@ -34,7 +34,9 @@ class UserList extends Component {
 }
 
 function mapStateToProps(state) {
-    return {users: state.users};
+    return {
+      users: state.users
+    };
 }
 
 function mapDispatchToProps(dispatch) {

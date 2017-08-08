@@ -39,41 +39,30 @@ const reducer = function(state = initialState, action) {
 
 
         case WITHDRAW_FUNDS:
-        //alert(action.payload)
-        //alert(state.selectedAccount.balance)
+
+
+
             const userIdx = state.users.findIndex(user => user._id === state.selectedUser._id);
-        //alert(userIdx)
             const accountIdx = state.users[userIdx].accounts.findIndex(account => account.id === state.selectedAccount.id);
-        alert(accountIdx)
 
-        return update(state, {
-            selectedAccount: {
-              balance: {
-                $apply: function(balance) {
-                    return balance - action.payload
+            //alert('hi')
+
+            return update(state, {
+                users: {
+                    [userIdx]: {
+                        accounts: {
+                            [accountIdx]: {
+                                balance: {
+                                    $apply: function(balance) {
+                                        return balance - action.payload
+                                    }
+                                }      
+                            }
+                        }
+                    }
                 }
-              }
-            }  
-        })
 
-
-
-
-            // return update(state, {
-            //     users: {
-            //         [userIdx]: {
-            //             accounts: {
-            //                 [accountIdx]: {
-            //                     balance: {
-            //                         $apply: function(balance) {
-            //                             return balance - action.payload
-            //                         }
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // })
+            })
         default:
             return state;
     }
