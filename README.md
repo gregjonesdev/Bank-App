@@ -3,6 +3,8 @@
 
 ![app gif](https://thumbs.gfycat.com/ImaginativePlainGar-size_restricted.gif)
 
+## Overview
+
 This application contains a list of users with one or more accounts at a bank. When a user is selected, a list of the accounts is displayed and a withdrawl from any of the accounts can be made.
 
 I organized the application into components/containers, actions, and a reducer that managed the state of the user list, and the currently selected user and account.
