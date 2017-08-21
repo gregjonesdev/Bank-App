@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/App.css';
-
-
-//import components and containers
 import UserList from '../containers/UserList'
-
 
 class App extends Component {
   render() {
@@ -21,7 +17,6 @@ class App extends Component {
             </p>
           </div>
         </div>
-
     )
   }
 }

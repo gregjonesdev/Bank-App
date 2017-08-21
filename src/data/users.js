@@ -10,13 +10,7 @@ const userList = () => {
            {
               id:0,
               accountType:"checking",
-              //balance:3260.14
-              balance:1000.00
-           },
-           {
-              id:2,
-              accountType:"credit",
-              balance:1936.46
+              balance:3260.14
            }
         ]
      },
@@ -57,8 +51,8 @@ const userList = () => {
               balance:1182.32
            },
            {
-              id:2,
-              accountType:"credit",
+              id:1,
+              accountType:"savings",
               balance:2349.69
            }
         ]
